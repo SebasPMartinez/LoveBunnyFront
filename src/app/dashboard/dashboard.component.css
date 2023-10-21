@@ -1,0 +1,57 @@
+
+.chat-online {
+    color: #34ce57 !important;
+}
+
+.chat-offline {
+    color: #e4606d !important;
+}
+
+
+.chat-messages {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    max-height: 521px !important;
+    overflow-y: scroll !important;
+}
+
+.chat-message-left, 
+.chat-message-right {
+    display: flex !important;
+    flex-shrink: 0 !important;
+}
+
+.chat-message-left {
+    margin-right: auto !important;
+}
+
+.chat-message-right { 
+    flex-direction: row-reverse !important;
+    margin-left: auto !important;
+}
+.py-3 {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+.px-4 {
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+}
+.flex-grow-0 {
+    flex-grow: 0!important;
+}
+.border-top {
+    border-top: 1px solid #dee2e6!important;
+}
+
+
+.card{
+    margin: 0px !important;
+}
+
+.contenedorEspera{
+    height: 707px;
+    max-height: 707px;
+    min-height: 707px;
+}

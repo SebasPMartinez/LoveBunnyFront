@@ -1,0 +1,123 @@
+<div class="contenedor">
+    <div class="izquierda">
+        <img src="../../assets/img/img-login2.png" alt="Imagen centrada" class="imagen-centrada">
+    </div>
+    <div class="derecha" *ngIf="!registrar">
+        <div class="login-text"><img  src="../../assets/img/Loginsebas.png"  alt="Imagen centrada" class="imagenDerecha"></div>
+
+        <form class="input-container" [formGroup]="formularioInicio">
+            <input type="text" formControlName="usuario"  name="usuario" placeholder="Nombre de usuario" required>
+            <input type="password" formControlName="password"  name="password" placeholder="Contraseña" required>
+            <button type="submit" class="botonIngresar" (click)="ingresar()">Ingresar</button> 
+
+            <a href="#" class="centrarInputs">¿Olvidaste tu contraseña?</a>
+            <a href="#" class="centrarInputs2" (click)="crearCuenta()">Crear una cuenta</a>
+        </form>
+
+
+    </div>
+
+    <div class="derecha" *ngIf="registrar">
+        <div class="login-text"><img src="../../assets/img/Reigstro.png" alt="Imagen centrada" class="imagenDerecha"></div>
+
+        <form class="input-container-register" [formGroup]="formularioLogin" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label">Usuario</label>
+                            <input type="text" class="form-control" formControlName="nombre" [maxlength]="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label">Deporte Favorito</label>
+                            <input type="text" class="form-control" formControlName="deporte" [maxlength]="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label">Profesion</label>
+                            <input type="text" class="form-control" formControlName="profesion" [maxlength]="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label">Estado Civil</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="estadoCivil">
+                                <option selected disabled>Seleccione una opción</option>
+                                <option value="1">Soltero</option>
+                                <option value="2">Casado</option>
+                                <option value="3">Separado</option>
+                                <option value="4">Divorsiado</option>
+                                <option value="5">Viudo</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label">Genero</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="genero" (change)="onChange($event)">
+                                <option selected disabled>Seleccione una opción</option>
+                                <option value="1">Femenino</option>
+                                <option value="2">Masculino</option>
+                                <option value="3">No binario</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label">Contraseña</label>
+                            <input type="password" class="form-control" formControlName="password" [maxlength]="10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="row">
+                <div class="col-md-4">
+                    <div class="text-center">
+                        <div class="profile-picture">
+                            
+                            <img class="profile-user-img img-fluid img-circle" *ngIf="imagen" src="{{imagen}}" alt="User profile picture">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="image-upload">
+                        <label for="file-input">
+                            <i class="fa fa-camera" aria-hidden="true"></i> Cambiar foto de perfil
+                        </label>
+                        <input type="file" id="file-input" accept="image/*" (change)="imagenSeleccionada($event)" #fileUpload />
+                    </div>
+                </div>
+            </div> -->
+            
+
+            <button type="submit" class="botonIngresar" (click)="CrearPerfil()">Crear Perfil</button>
+
+            <a href="#" class="centrarInputs2"  style="border-bottom: 1px solid #ccc;">
+                Ya tengo una cuenta
+            </a>
+        </form>
+
+
+    </div>
+</div>
+
+
+
+

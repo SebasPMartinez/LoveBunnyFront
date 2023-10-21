@@ -1,0 +1,9 @@
+.input-file {
+    /* Agrega los estilos que desees para el input de tipo archivo */
+    border: 1px solid #ccc;
+    padding: 5px;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 5px;
+    /* Puedes personalizar estos estilos según tus necesidades */
+}

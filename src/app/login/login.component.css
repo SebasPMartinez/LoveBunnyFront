@@ -1,0 +1,281 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Evita el desplazamiento */
+  }
+
+  .contenedor {
+    display: flex;
+    height: 100vh;
+  }
+
+
+  .izquierda {
+    flex: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1A1A1A;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .imagen-centrada {
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .derecha {
+    flex: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #B12323; /* Cambia este color según tus preferencias */
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  .imagenDerecha {
+    max-width: 100%;
+    max-height: calc(100% - 57px);
+    padding-right: 25px;
+  }
+  .login-text {
+    align-self: center;
+    /* background-color: aqua; */
+  }
+  
+  .centrarInputs {
+    align-self: center;
+    color: aliceblue;
+  }
+  
+  .centrarInputs2 {
+    align-self: center;
+    text-decoration: none;
+    color: aliceblue;
+  }
+
+  .derecha .input-container {
+    margin-top: 40px;
+    align-self: center;
+    /* background-color: blue; */
+    width: 100%;
+    min-width: 250px;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .input-container-register {
+    margin-top: 40px;
+    align-self: center;
+    width: 100%;
+    min-width: 250px;
+    max-width: 820px;
+    display: flex;
+    flex-direction: column;
+    color: aliceblue;
+  }
+
+
+  .derecha input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 15px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  } 
+
+
+  .centrarInputs{
+    align-self: center;
+    color: aliceblue;
+  }
+  .centrarInputs2{
+    align-self: center;
+    text-decoration: none;
+    color: aliceblue;
+  }
+
+  .botonIngresar{
+    width: 70%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    align-self: center;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #1A1A1A;
+    color: #fff;
+  }
+
+  .botonIngresar:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: #1A1A1A;
+    transition: 0.5s;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  .form-select {
+    width: 100%;
+    padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#343a40' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' d='M2 5l6 6 6-6'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem;
+    box-shadow: none;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    appearance: none;
+
+
+     background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='#343a40' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' d='M2 5l6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  }
+  
+  .form-select:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,0.25);
+  }
+  
+  .form-select:disabled {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    opacity: 1;
+  }
+  
+  .form-select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+  
+  .form-select-sm {
+    padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.25rem;
+  }
+  
+  .form-select-lg {
+    padding: 0.5rem 3rem 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    width: 80%;
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.image-option {
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+.image-upload > input
+{
+    display: none;
+}
+
+.image-upload img
+{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+
+.profile-picture {
+  width: 90px; /* Tamaño deseado para la imagen de perfil */
+  height: 90px;
+  border-radius: 50%; /* Hace que la imagen sea circular */
+  overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del círculo */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  background-color: #253341;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para llenar completamente el círculo */
+}
+
+.image-upload {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.image-upload label {
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+
+  font-size: 1.2em;
+  transition: background-color 0.3s;
+}
+
+.image-upload label:hover {
+  background-color: #375b82;
+}
+
+/* Ocultar el input de archivo */
+#file-input {
+  display: none;
+}
